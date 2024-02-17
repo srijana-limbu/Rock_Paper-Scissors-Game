@@ -2,6 +2,7 @@ let userScore = 0;
 let compScore = 0;
 
 const choices = document.querySelectorAll(".choice");
+const msg = document.querySelector("#msg");
 
 //generate computer choice ->modular 
 const genCompChoice = () => {
@@ -14,13 +15,22 @@ const genCompChoice = () => {
 
 const draGame = () => {
     console.log("game was draw;");
+    msg.innerText = "Draw Game.";
+    msg.style.backgroundColor = "#1b0033";
+
+
 };
 
 const showWinner = (userWin) => {
     if (userWin) {
         console.log("You win!");
+        msg.innerText = "You win.";
+        msg.style.backgroundColor = "#aaf683";
     } else {
         console.log("You lose!");
+        msg.innerText = "You lose.";
+        msg.style.backgroundColor = "#d90429";
+
     }
 }
 
