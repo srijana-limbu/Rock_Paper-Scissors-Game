@@ -6,7 +6,7 @@
 
 h1 {
     background-color: #1b0033;
-    color: white;
+    color: #fff;
     line-height: 5rem; /*text centre  */
 }
 
@@ -36,4 +36,30 @@ img {
     align-items: center;
     gap: 3rem;
     margin-top: 5rem;
+}
+
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 3rem;
+    gap: 4rem;
+}
+
+#user-score, #comp-score {
+    font-size: 4rem;
+}
+
+.msg-container {
+    margin-top: 5rem;
+}
+#msg {
+    margin-top: 4rem;
+    background-color: #1b0033;
+    color: #fff;
+    font-size: 2rem;
+    display: inline;
+    padding: 1rem;
+    border-radius: 1rem;
 }
