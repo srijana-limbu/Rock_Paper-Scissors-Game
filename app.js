@@ -21,14 +21,16 @@ const draGame = () => {
 
 };
 
-const showWinner = (userWin) => {
+const showWinner = (userWin, userchoice, compchoice) => {
     if (userWin) {
         console.log("You win!");
-        msg.innerText = "You win.";
+        msg.innerText = `You win! Your ${userchoice} beats ${compchoice}`;
         msg.style.backgroundColor = "#aaf683";
     } else {
         console.log("You lose!");
-        msg.innerText = "You lose.";
+        //msg.innerText = "You lose.";
+        msg.innerText = `You lost.  ${compchoice} beats Your ${userchoice}`;
+
         msg.style.backgroundColor = "#d90429";
 
     }
@@ -60,7 +62,7 @@ const playGame = (userchoice) => {
             userWin = compchoice === "rock" ? false : true;
             //rock, paper
         }
-        showWinner(userWin);
+        showWinner(userWin, userchoice, compchoice);
     }
 };
 
