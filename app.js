@@ -4,6 +4,10 @@ let compScore = 0;
 const choices = document.querySelectorAll(".choice");
 const msg = document.querySelector("#msg");
 
+const userScorePagph = document.querySelector("#user-score");
+const compScorePagph = document.querySelector("#comp-score");
+
+
 //generate computer choice ->modular 
 const genCompChoice = () => {
     //rock, paper, scissors
@@ -14,7 +18,7 @@ const genCompChoice = () => {
 };
 
 const draGame = () => {
-    console.log("game was draw;");
+    //console.log("game was draw;");
     msg.innerText = "Draw Game.";
     msg.style.backgroundColor = "#1b0033";
 
@@ -23,11 +27,17 @@ const draGame = () => {
 
 const showWinner = (userWin, userchoice, compchoice) => {
     if (userWin) {
+        userScore++;
+        userScorePagph.innerText = userScore;
+
         console.log("You win!");
         msg.innerText = `You win! Your ${userchoice} beats ${compchoice}`;
         msg.style.backgroundColor = "#aaf683";
     } else {
-        console.log("You lose!");
+        compScore++;
+        compScorePagph.innerText = compScore;
+
+        //console.log("You lose!");
         //msg.innerText = "You lose.";
         msg.innerText = `You lost.  ${compchoice} beats Your ${userchoice}`;
 
